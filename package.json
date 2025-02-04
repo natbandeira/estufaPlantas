@@ -1,0 +1,27 @@
+{
+  "name": "estufa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.ts",
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "stop": "kill-port 3000",
+    "tsc": "tsc"
+  },
+  "keywords": [],
+  "author": "aneycan",
+  "license": "ISC",
+  "description": "app para controle de plantas",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "kill-port": "^2.0.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
