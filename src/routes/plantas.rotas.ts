@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import { Planta } from "../models/Planta.model";
 
 const router = Router();
 
@@ -11,6 +12,11 @@ router.post('/addPlanta', (req: Request, res: Response) => {
         console.error(error);
         res.status(500).json({ message: 'Não foi possível adicionar a plantinha no momento X_X'});
     }
+    const novaPlanta = new Planta({ nome: 'Samambaia', especie: 'Avenca' });
+    novaPlanta.save().then(planta => {
+    console.log('ID da planta:', planta._id); // O ID foi gerado automaticamente pelo MongoDB
+});
+    
 });
 
 router.get('/mostraPlantas', (req: Request, res: Response) => {
