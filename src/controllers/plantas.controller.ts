@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { Planta } from '../models/Planta';
+import { Planta } from '../models/Planta.model';
 
 export const addPlanta = async (req: Request, res: Response) => {
     try {

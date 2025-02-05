@@ -4,8 +4,12 @@ interface Planta {
     nome: string;
     dataChegada: Date;
     origem: string;
-    dataUltimaAdubacao: Date; //não obrigatório
-    tipoAdubo: string; //não obrigatório
+    //não obrigatório
+    dataUltimaAdubacao: Date; 
+    tipoAdubo: string; 
+    dataUltimoTratamento: Date; 
+    tipoTratamento: string; 
+    nomePraga: string; 
 }
 
 const plantaSchema = new mongoose.Schema<Planta>({
@@ -13,7 +17,10 @@ const plantaSchema = new mongoose.Schema<Planta>({
     dataChegada: { type: Date, default: Date.now},
     origem: { type: String, required: true},
     dataUltimaAdubacao: { type: Date },
-    tipoAdubo: { type: String }
+    tipoAdubo: { type: String },
+    dataUltimoTratamento: { type: Date },
+    tipoTratamento: {type: String },
+    nomePraga: { type: String}
 });
-
+                        
 export const Planta = mongoose.model<Planta>('Planta', plantaSchema);
