@@ -2,14 +2,15 @@
   "name": "estufa",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+"scripts": {
+  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+  "build": "tsc",
+  "start": "node dist/server.js"
+},
+  "keywords": ["plants", "api", "typescript", "express", "mongodb"],
+  "author": "Natalia Bandeira - nbandeira7@gmail.com",
+  "license": "MIT",
+  "description": "API RESTful para catalogação e gerenciamento de plantas",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
