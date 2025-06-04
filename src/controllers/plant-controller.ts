@@ -1,0 +1,53 @@
+// recebe requisições HTTP e retorna respostas
+// orquestra as chamadas para o Service
+// são definidos os métodos para criar, listar, atualizar plantas
+
+import { Request , Response } from 'express';
+import { IPlant } from '../models/plant-model'
+import { PlantService } from '../services/plant-service';
+
+export class PlantController {
+    async criarPlanta (req: Request, res: Response): Promise<void> {
+        try {
+            const novaPlanta : IPlant = await PlantService.criarPlanta(req.body);
+            res.status(201).json({
+                message: `Plantinha "${novaPlanta.nome}" cadastrada com sucesso :D`,
+                data: novaPlanta
+            })
+       } catch (error) {
+            res.status(500).json({
+                message: 'Falha ao registrar a plantinha x_x',
+                error: (error as Error).message
+            })
+       }
+    };
+
+    async mostrarEstufa (req: Request, res: Response): Promise<void> {
+        try {
+            const plantasEstufa = await PlantService.listarPlantas();
+            res.status(200).json(plantasEstufa);
+        } catch (error) {
+            console.error('Falha ao mostrar plantinhas da estufa x_x');
+            res.status(500).json({
+                message: 'FFalha ao mostrar plantinhas da estufa x_x',
+                error: (error as Error).message
+            })
+        }
+    }
+
+    // async atualizarPlanta (req: Request, res: Response): Promise<void> {
+    //     try {
+    //         const { nomePlanta } = req.params;
+    //         const plantaAtualizada = await PlantService.atualizarPlanta(nomePlanta, req.body);
+    //         res.status(200).json({
+    //             message: `Plantinha "${plantaAtualizada}" ataulizada com sucesso :D`
+    //         })
+    //     } catch (error) {
+    //         console.error('Falha ao atualizar a plantinha x_x');
+    //         res.status(500).json({
+    //             message: 'Falha ao atualizar a plantinha x_x',
+    //             error: (error as Error).message
+    //         })
+    //     }
+    // }
+}
