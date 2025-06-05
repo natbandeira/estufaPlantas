@@ -74,8 +74,10 @@ npm start
 
 ## 📡 Endpoints da API
 
-- `GET /estufa` - Lista todas as plantas
 - `POST /planta` - Cria nova planta
+- `GET /planta/:nomePlanta` - Mostra uma planta específica
+- `PUT /planta/:nomePlanta` - Atualiza uma planta específica
+- `GET /estufa` - Lista todas as plantas
 
 ### 📋 Próximas Features
 - [ ] Sistema de autenticação
