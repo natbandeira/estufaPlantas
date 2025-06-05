@@ -1,9 +1,4 @@
-// representa os dados 
-// define a estrutura das plantas e cria Schema do MongoDB
-
 import mongoose, { Schema , Document } from 'mongoose';
-
-// interface para a classe Plant
 export interface IPlant {
     nome: string;
     nomeCientifico?: string;
@@ -16,8 +11,6 @@ export interface IPlant {
     nomePraga?: string;
     plantaAtiva?: boolean;
 }
-
-// interface para representar o documento no MongoDB
 export interface IPlantDocument extends Document {
     nome: string;
     nomeCientifico?: string;
@@ -31,7 +24,6 @@ export interface IPlantDocument extends Document {
     plantaAtiva?: boolean;
 }
 
-// schema do Mongoose
 const PlantSchema: Schema = new Schema<IPlantDocument>({
     nome: { type: String, required: true },
     nomeCientifico: { type: String},

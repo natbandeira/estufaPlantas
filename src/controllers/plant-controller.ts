@@ -1,13 +1,12 @@
 import { Request , Response } from 'express';
 import { IPlant } from '../models/plant-model'
 import { PlantService } from '../services/plant-service';
-
 export class PlantController { 
     async criarPlanta (req: Request, res: Response): Promise<void> {
         try {
             const novaPlanta : IPlant = await PlantService.criarPlanta(req.body);
             res.status(201).json({
-                message: `Plantinha "${novaPlanta.nome}" cadastrada com sucesso :D`,
+                message: `Plantinha '${novaPlanta.nome}' cadastrada com sucesso :D`,
                 data: novaPlanta
             })
        } catch (error) {
@@ -24,7 +23,7 @@ export class PlantController {
             const novosDados = req.body;
             const plantaAtualizada = await PlantService.atualizarPlanta(nomePlanta, novosDados);
             res.status(200).json({
-                message: `Plantinha "${nomePlanta}" ataulizada com sucesso :D`
+                message: `Plantinha '${nomePlanta}' ataulizada com sucesso :D`
             })
         } catch (error) {
             console.error('Falha ao atualizar a plantinha x_x');
@@ -33,7 +32,7 @@ export class PlantController {
                 error: (error as Error).message
             })
         }
-    }
+    };
 
     async mostrarPlanta (req: Request, res: Response): Promise<void> {
         try {
@@ -47,7 +46,7 @@ export class PlantController {
                 error: (error as Error).message
             })
         }
-    }
+    };
 
     async mostrarEstufa (req: Request, res: Response): Promise<void> {
         try {
@@ -60,5 +59,5 @@ export class PlantController {
                 error: (error as Error).message
             })
         }
-    }
+    };
 }
