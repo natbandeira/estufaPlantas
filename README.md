@@ -8,11 +8,11 @@ A **Estufa** é uma aplicação voltada para entusiastas de plantas que desejam 
 
 ## 🌿 Funcionalidades
 
-- ✅ **CRUD Completo**: Criar, ler, atualizar e deletar plantas
-- 📊 **Catalogação Detalhada**: Informações completas sobre cada planta
-- 🏷️ **Classificação Científica**: Nome científico e dados botânicos
-- 🌱 **Histórico de Cuidados**: Adubação, tratamentos e controle de pragas
-- 📅 **Controle Temporal**: Datas de chegada, últimos cuidados e status
+- **CRUD Completo**: Criar, ler, atualizar e deletar plantas
+- **Catalogação Detalhada**: Informações completas sobre cada planta
+- **Classificação Científica**: Nome científico e dados botânicos
+- **Histórico de Cuidados**: Adubação, tratamentos e controle de pragas
+- **Controle Temporal**: Datas de chegada, últimos cuidados e status
 
 ## 🖥️ Tecnologias Utilizadas
 
@@ -72,46 +72,10 @@ npm run dev
 npm start
 ```
 
-## 🛠️ Scripts Disponíveis
-
-```bash
-npm run dev        # Executa em modo desenvolvimento
-npm run build      # Compila o projeto
-npm start          # Executa em modo produção
-```
-
 ## 📡 Endpoints da API
 
 - `GET /estufa` - Lista todas as plantas
 - `POST /planta` - Cria nova planta
-
-## 📁 Estrutura do Projeto
-
-```
-estufaPlantas/
-├── src/
-│   ├── controllers/     # Controladores da API
-│   │   └── plant-controller.ts
-│   ├── models/          # Modelos de dados  
-│   │   └── plant-model.ts
-│   ├── routes/          # Definição das rotas
-│   │   └── plant-routes.ts
-│   ├── services/        # Lógica de negócio
-│   │   └── server.ts
-│   └── server.ts        # Arquivo principal
-```
-
-## 🎯 Roadmap
-
-### ✅ Concluído
-- [ ] CRUD básico de plantas
-- [x] Estrutura base com TypeScript
-- [x] Configuração do Express
-
-### 🚧 Em Desenvolvimento
-- [ ] Frontend com React + Next.js
-- [ ] Documentação com Swagger
-- [ ] Testes unitários abrangentes
 
 ### 📋 Próximas Features
 - [ ] Sistema de autenticação
@@ -141,6 +105,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-<div align="center">
+<!-- <div align="center">
   <sub>Feito com 💚 e muito ☕ por uma apaixonada por plantas e tecnologia!</sub>
-</div>
+</div> -->
