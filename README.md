@@ -1,10 +1,10 @@
 # 🌱 Estufa - API de Catalogação de Plantas
 
-Uma API RESTful simples e eficiente para catalogar e gerenciar plantas. Desenvolvida com foco em aprendizado de TypeScript, Express, POO, testes unitários e boas práticas de desenvolvimento.
+Uma API RESTful simples e eficiente para catalogar e gerenciar plantas. Desenvolvida com foco em aprendizado de Node, TypeScript, Express, POO, testes unitários e boas práticas de desenvolvimento.
 
 ## 📋 Sobre o Projeto
 
-A **Estufa** é uma aplicação voltada para entusiastas de plantas que desejam manter um controle organizado da sua coleção. Com ela, é possível registrar informações detalhadas sobre cada planta, desde dados básicos até histórico de cuidados e tratamentos.
+**Botaneiro ** é uma aplicação voltada para entusiastas de plantas que desejam manter um controle organizado da sua coleção. Com ela, é possível registrar informações detalhadas sobre cada planta, desde dados básicos até histórico de cuidados e tratamentos.
 
 ## 🌿 Funcionalidades
 
