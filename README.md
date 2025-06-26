@@ -4,7 +4,7 @@ Uma API RESTful simples e eficiente para catalogar e gerenciar plantas. Desenvol
 
 ## 📋 Sobre o Projeto
 
-**Botaneiro ** é uma aplicação voltada para entusiastas de plantas que desejam manter um controle organizado da sua coleção. Com ela, é possível registrar informações detalhadas sobre cada planta, desde dados básicos até histórico de cuidados e tratamentos.
+**Botaneiro** é uma aplicação voltada para entusiastas de plantas que desejam manter um controle organizado da sua coleção. Com ela, é possível registrar informações detalhadas sobre cada planta, desde dados básicos até histórico de cuidados e tratamentos.
 
 ## 🌿 Funcionalidades
 
